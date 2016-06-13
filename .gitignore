@@ -1,0 +1,6 @@
+.idea
+test/tmp/
+node_modules/
+temp/
+/test/expected/index.html
+/test/expected/page-components.html
