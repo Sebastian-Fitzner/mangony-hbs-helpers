@@ -24,6 +24,8 @@
   "dependencies": {
     "export-files": "^2.1.1",
     "glob": "^7.0.3",
+    "highlight.js": "^9.4.0",
+    "js-beautify": "^1.6.3",
     "markdown-it": "^6.0.5",
     "markdown-it-attrs": "^0.5.1",
     "markdown-it-named-headers": "0.0.4"
