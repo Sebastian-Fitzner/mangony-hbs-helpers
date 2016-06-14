@@ -1,7 +1,17 @@
 var lib = require('./lib/');
 
-module.exports = function (Handlebars, options) {
-	Object.keys(lib).forEach(function (key) {
-		Handlebars.registerHelper(key, lib[key]);
-	});
+/**
+ * Registers helpers on a Handlebars instance.
+ *
+ * @method register
+ * @param {Object} handlebars Handlebars instance.
+ * @return {Object} Object of helpers.
+ * @static
+ */
+lib.register = function (handlebars) {
+	handlebars.registerHelper(lib);
+
+	return lib;
 };
+
+module.exports = lib;
