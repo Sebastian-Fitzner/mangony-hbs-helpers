@@ -1,9 +1,7 @@
 <h1 align="center">
-<img width="400px" src="http://www.veams.org/downloads/logo.svg" alt="Logo Mangony" />
+<img width="400px" src="http://www.veams.org/downloads/logo.svg" alt="Logo Mangony" /><br>
+Mangony Handlebars Helpers
 </h1>
-
-## Mangony Handlebars Helpers 
-
 
 ### Installation
 
@@ -222,6 +220,10 @@ This helper repeats the content n times.
     My Custom content {{this}}
 {{/times}}
 ```
+
+### Mangony
+
+**Mangony is yet another static site generator - fast, simple and powerful:** https://github.com/Sebastian-Fitzner/mangony
 
 ## License 
 
