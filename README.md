@@ -25,7 +25,7 @@ Both generates an object containing the mangony helpers and registers them with 
 
 ```js
 var handlebars = require('handlebars');
-var helpers = require('handlebars-layouts');
+var helpers = require('mangony-hbs-helpers');
 
 helpers.register(handlebars);
 ```
