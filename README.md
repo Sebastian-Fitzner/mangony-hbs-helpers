@@ -164,6 +164,16 @@ This helper merges two objects into one to extend the context.
 {{/merge}}
 ```
 
+#### `{{now [format] }}`
+
+- `format` `String` - Date format you like to get.
+
+This helper displays the date of now and uses [moment.js](http://momentjs.com). 
+
+```handlebars
+Current Time: {{now "Do MMMM YYYY, h:mm:ss a"}}
+```
+
 #### `{{#pictureData [pictures] [presets] }}`
 
 - `pictures` `Array` - Array of all pictures.
