@@ -1,36 +1,37 @@
 {
-	"name": "mangony-hbs-helpers",
-	"version": "0.0.4",
-	"description": "Handlebars helpers used by Mangony",
-	"main": "index.js",
-	"scripts": {
-		"test": "./node_modules/.bin/mocha --reporter spec"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+ssh://git@github.com/Sebastian-Fitzner/mangony-hbs-helpers.git"
-	},
-	"keywords": [
-		"Mangony",
-		"Handlebars",
-		"Helpers"
-	],
-	"author": "Sebastian Fitzner",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/Sebastian-Fitzner/mangony-hbs-helpers/issues"
-	},
-	"homepage": "https://github.com/Sebastian-Fitzner/mangony-hbs-helpers#readme",
-	"dependencies": {
-		"export-files": "^2.1.1",
-		"highlight.js": "^9.4.0",
-		"js-beautify": "^1.6.3",
-		"markdown-it": "^6.0.5",
-		"markdown-it-attrs": "^0.5.1",
-		"markdown-it-named-headers": "0.0.4"
-	},
-	"devDependencies": {
-		"chai": "^3.5.0",
-		"mocha": "^2.5.3"
-	}
+  "name": "mangony-hbs-helpers",
+  "version": "0.0.5",
+  "description": "Handlebars helpers used by Mangony",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Sebastian-Fitzner/mangony-hbs-helpers.git"
+  },
+  "keywords": [
+    "Mangony",
+    "Handlebars",
+    "Helpers"
+  ],
+  "author": "Sebastian Fitzner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sebastian-Fitzner/mangony-hbs-helpers/issues"
+  },
+  "homepage": "https://github.com/Sebastian-Fitzner/mangony-hbs-helpers#readme",
+  "dependencies": {
+    "export-files": "~2.1.1",
+    "highlight.js": "~9.4.0",
+    "js-beautify": "~1.6.3",
+    "markdown-it": "~6.0.5",
+    "markdown-it-attrs": "~0.5.1",
+    "markdown-it-named-headers": "0.0.4",
+    "moment": "~2.14.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
 }
