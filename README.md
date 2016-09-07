@@ -102,9 +102,10 @@ This helper provides a for loop which can be used to repeat content.
 {{/for}}
 ```
 
-#### `{{#highlight [type] }}`
+#### `{{#highlight [type] origin=[boolean] }}`
 
 - `type` `String` - Language of code block.
+- `origin` `Boolean` - When set to true it returns the highlighted block and the origin one
 
 This helper uses `highlight.js` to return a syntax highlighted code block.
 
@@ -147,6 +148,7 @@ This helper renders a markdown file into HTML by using `markdown-it`, `markdown-
 #### `{{#merge [data] with=[obj|string] }}`
 
 - `data` `Object` - Data object.
+- `with` `Object|String` - JSON string or object which will be merged with `data`
 
 This helper merges two objects into one to extend the context.
 
