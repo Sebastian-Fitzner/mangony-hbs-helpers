@@ -102,10 +102,11 @@ This helper provides a for loop which can be used to repeat content.
 {{/for}}
 ```
 
-#### `{{#highlight [type] origin=[boolean] }}`
+#### `{{#highlight [type] origin=[boolean] escapeHTML=[boolean] }}`
 
 - `type` `String` - Language of code block.
 - `origin` `Boolean` - When set to true it returns the highlighted block and the origin one
+- `escapeHTML` `Boolean` - Escape HTML when set to true
 
 This helper uses `highlight.js` to return a syntax highlighted code block.
 
