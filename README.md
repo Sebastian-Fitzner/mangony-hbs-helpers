@@ -46,10 +46,11 @@ This helper cleans up your html block by indenting and deleting spaces and line 
 {{/beautifyHTML}}
 ```
 
-#### `{{buildPath [string] [string2] }}`
+#### `{{buildPath [string] [string2] goUp=[number] }}`
 
 - `string` `String` - First part of a path.
 - `string2` `String` - Second part of a path.
+- `goUp` `Number` - You can go specific folders up by defining the hash `goUp`.
 
 This helper concatenate two strings by adding a `/`.
 
