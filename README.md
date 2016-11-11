@@ -89,6 +89,22 @@ This helper embeds the file content.
 {{{embeding "my/custom/file.hbs"}}}
 ```
 
+#### `{{{#filter [array] by=[value] reverse=[boolean] }}}`
+
+- `array` `Array` - Array you want to filter.
+- `by` `String` - Filter value.
+- `reverse` `Boolean` - If you want to reverse the result set it to true.
+
+This helper filters an array after a specific property value. 
+
+```handlebars
+{{#filter myData by="settings.hide" reverse=true}}
+    {{#each this}}
+        my filtered content element {{this.name}}
+    {{/each}}
+{{/filter}}
+```
+
 #### `{{#for [from] [to] [incr] }}`
 
 - `from` `Number` - Starting index for the loop.
@@ -101,6 +117,20 @@ This helper provides a for loop which can be used to repeat content.
 {{#for 0 2 1}}
     My Custom content 
 {{/for}}
+```
+
+#### `{{#getData [from] [to] [incr] }}`
+
+- `from` `Number` - Starting index for the loop.
+- `to` `Number` - End index for the loop.
+- `incr` `Number` _Optional_ - Increment number for the loop.
+
+This helper allows you to get the whole data object of partials, pages or layouts.
+
+```handlebars
+{{#getData from="my-custom-partial" typeof="partial"}}
+	my data object of the partial like: {{this.filename}} | {{this.id}}
+{{/getData}}
 ```
 
 #### `{{#highlight [type] origin=[boolean] escapeHTML=[boolean] }}`
@@ -223,6 +253,30 @@ This helper returns a random number between 0 - 1000.
 </div>
 ```
 
+#### `{{#objToArr [object]}}`
+
+- `object` `Object` - Object which gets flattened to an array.
+
+This helper flattens an object to an array.
+
+```handlebars
+{{#objToArr pages}}
+	{{#each this}}
+	    My array element: {{this.name}}
+	[{{/each}}
+{{/objToArr}}
+```
+
+#### `{{stringify [JSON]}}`
+
+- `JSON` `Object` - JSON/JS object.
+
+This helper makes a string out of JSON objects.
+
+```handlebars
+{{stringify this.jsOptions}}
+```
+
 #### `{{#times [n] }}`
 
 - `n` `Number` - Repeating number.
@@ -233,6 +287,17 @@ This helper repeats the content n times.
 {{#times 3}}
     My Custom content {{this}}
 {{/times}}
+```
+
+#### `{{url [path]}}`
+
+- `path` `String` - Absolute or relative URL path to file.
+
+This helper prints out an external URL (`http://` or `https://`) or the the `assets` prefix.
+
+```handlebars
+{{url "my/custom/file.jpg"}} outputs "./my/custom/file.jpg" 
+{{url "https://google.com"}} outputs "https://google.com"
 ```
 
 ### Mangony
