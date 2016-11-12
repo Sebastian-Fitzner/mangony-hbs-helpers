@@ -133,6 +133,17 @@ This helper allows you to get the whole data object of partials, pages or layout
 {{/getData}}
 ```
 
+#### `{{getUrl [path]}}`
+
+- `path` `String` - Absolute or relative URL path to file.
+
+This helper prints out an external URL (`http://` or `https://`) or the the `assets` prefix.
+
+```handlebars
+{{getUrl "my/custom/file.jpg"}} outputs "./my/custom/file.jpg" 
+{{getUrl "https://google.com"}} outputs "https://google.com"
+```
+
 #### `{{#highlight [type] origin=[boolean] escapeHTML=[boolean] }}`
 
 - `type` `String` - Language of code block.
@@ -287,17 +298,6 @@ This helper repeats the content n times.
 {{#times 3}}
     My Custom content {{this}}
 {{/times}}
-```
-
-#### `{{url [path]}}`
-
-- `path` `String` - Absolute or relative URL path to file.
-
-This helper prints out an external URL (`http://` or `https://`) or the the `assets` prefix.
-
-```handlebars
-{{url "my/custom/file.jpg"}} outputs "./my/custom/file.jpg" 
-{{url "https://google.com"}} outputs "https://google.com"
 ```
 
 ### Mangony
