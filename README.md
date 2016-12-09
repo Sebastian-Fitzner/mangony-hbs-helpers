@@ -137,7 +137,7 @@ This helper allows you to get the whole data object of partials, pages or layout
 
 - `path` `String` - Absolute or relative URL path to file.
 
-This helper prints out an external URL (`http://` or `https://`) or the the `assets` prefix.
+This helper prints out an URL (`http://`, `https://`, `mailto:`) or the `assets` prefix.
 
 ```handlebars
 {{getUrl "my/custom/file.jpg"}} outputs "./my/custom/file.jpg" 
