@@ -278,6 +278,22 @@ This helper flattens an object to an array.
 {{/objToArr}}
 ```
 
+#### `{{#sortArr [arr] [prop] reverse=[boolean]}}`
+
+- `arr` `Array` - Array which you want to sort.
+- `prop` `String` - String which äÄ'Ä
+
+
+This helper flattens an object to an array.
+
+```handlebars
+{{#objToArr pages}}
+	{{#each this}}
+	    My array element: {{this.name}}
+	[{{/each}}
+{{/objToArr}}
+```
+
 #### `{{stringify [JSON]}}`
 
 - `JSON` `Object` - JSON/JS object.
