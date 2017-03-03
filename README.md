@@ -119,13 +119,12 @@ This helper provides a for loop which can be used to repeat content.
 {{/for}}
 ```
 
-#### `{{#getData [from] [to] [incr] }}`
+#### `{{#getData [from] [typeof] }}`
 
-- `from` `Number` - Starting index for the loop.
-- `to` `Number` - End index for the loop.
-- `incr` `Number` _Optional_ - Increment number for the loop.
+- `from` `String` - Id of your type.
+- `typeof` `String` - Type of your data object.
 
-This helper allows you to get the whole data object of partials, pages or layouts.
+This helper allows you to get the whole data object of partials, pages, data or layouts.
 
 ```handlebars
 {{#getData from="my-custom-partial" typeof="partial"}}
