@@ -187,6 +187,16 @@ This helper renders a markdown file into HTML by using `markdown-it`, `markdown-
 {{{markdown "dir/file.md"}}}
 ```
 
+#### `{{{mdContent [data] }}}`
+
+- `data` `String` - Markdown content.
+
+This helper renders a markdown content into HTML by using `markdown-it`, `markdown-it-attrs` and `markdown-it-named-headers`.
+
+```handlebars
+{{{mdContent myMarkdownContent}}}
+```
+
 #### `{{#merge [data] with=[obj|string] }}`
 
 - `data` `Object` - Data object.
@@ -286,11 +296,11 @@ This helper flattens an object to an array.
 This helper flattens an object to an array.
 
 ```handlebars
-{{#objToArr pages}}
+{{!#sortArr items "settings.sortOrder"}}
 	{{#each this}}
-	    My array element: {{this.name}}
+	    My sorted array element: {{this.name}}
 	[{{/each}}
-{{/objToArr}}
+{{/sortArr}}
 ```
 
 #### `{{stringify [JSON]}}`

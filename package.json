@@ -1,6 +1,6 @@
 {
   "name": "mangony-hbs-helpers",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Handlebars helpers used by Mangony",
   "main": "index.js",
   "scripts": {
