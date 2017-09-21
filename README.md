@@ -161,6 +161,34 @@ This helper uses `highlight.js` to return a syntax highlighted code block.
 {{/highlight}}
 ```
 
+#### `{{isFirst [idx]}}`
+
+- `idx` `Number` - index number.
+
+This helper returns a boolean if the element is the first one in a loop.
+
+```handlebars
+{{#each cars}}
+    {{#if (isFirst idx)}}
+        This is my first item.
+    {{/if}}
+{{/each}}
+```
+
+#### `{{#ifExists [file]}}`
+
+- `file` `String` - Path to file.
+
+This helper returns a boolean if the file exists under the path.
+
+```handlebars
+{{#ifExists 'test/my-file.json'}}
+    File exists!
+{{else}}
+    File does not exists!
+{{/each}}
+```
+
 #### `{{#limit [start] [end] [data] }}`
 
 - `start` `Number` - Starting index.
@@ -228,6 +256,20 @@ This helper displays the date of now and uses [moment.js](http://momentjs.com).
 Current Time: {{now "Do MMMM YYYY, h:mm:ss a"}}
 ```
 
+#### `{{#objToArr [object]}}`
+
+- `object` `Object` - Object which gets flattened to an array.
+
+This helper flattens an object to an array.
+
+```handlebars
+{{#objToArr pages}}
+	{{#each this}}
+	    My array element: {{this.name}}
+	[{{/each}}
+{{/objToArr}}
+```
+
 #### `{{#pictureData [pictures] [presets] }}`
 
 - `pictures` `Array` - Array of all pictures.
@@ -271,20 +313,6 @@ This helper returns a random number between 0 - 1000.
 ```handlebars
 <div class="doc__image-presets" id="my-id-{{random}}">
 </div>
-```
-
-#### `{{#objToArr [object]}}`
-
-- `object` `Object` - Object which gets flattened to an array.
-
-This helper flattens an object to an array.
-
-```handlebars
-{{#objToArr pages}}
-	{{#each this}}
-	    My array element: {{this.name}}
-	[{{/each}}
-{{/objToArr}}
 ```
 
 #### `{{#sortArr [arr] [prop] reverse=[boolean]}}`
