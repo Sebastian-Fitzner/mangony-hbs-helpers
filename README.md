@@ -1,5 +1,5 @@
 <h1 align="center">
-<img width="400px" src="http://www.veams.org/downloads/logo.svg" alt="Logo Mangony" /><br>
+<img width="400px" src="https://www.veams.org/downloads/logo.svg" alt="Logo Mangony" /><br>
 Mangony Handlebars Helpers
 </h1>
 
