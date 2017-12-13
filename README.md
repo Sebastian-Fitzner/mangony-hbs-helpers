@@ -181,7 +181,7 @@ This helper returns a boolean if the element is the first one in a loop.
 
 This helper returns a boolean if the file exists under the path.
 
-```handlebars
+``` handlebars
 {{#ifExists 'test/my-file.json'}}
     File exists!
 {{else}}
