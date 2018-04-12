@@ -246,6 +246,27 @@ This helper merges two objects into one to extend the context.
 {{/merge}}
 ```
 
+#### `{{#deepMerge [data] with=[obj|string] }}`
+
+- `data` `Object` - Data object.
+- `with` `Object|String` - JSON string or object which will be merged with `data`.
+
+This helper merges two objects into one to extend the context by using a deepmerge package.
+
+```handlebars
+{{#deepMerge this with=data}}
+    <li class="item">
+        {{> item }}
+    </li>
+{{/deepMerge}}
+
+{{#deepMerge this with='{"custom": "content"}'}}
+    <li class="item">
+        {{> item }}
+    </li>
+{{/deepMerge}}
+```
+
 #### `{{now [format] }}`
 
 - `format` `String` - Date format you like to get.
@@ -324,7 +345,7 @@ This helper returns a random number between 0 - 1000.
 This helper flattens an object to an array.
 
 ```handlebars
-{{!#sortArr items "settings.sortOrder"}}
+{{#sortArr items "settings.sortOrder"}}
 	{{#each this}}
 	    My sorted array element: {{this.name}}
 	[{{/each}}
