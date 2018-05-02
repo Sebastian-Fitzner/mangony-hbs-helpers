@@ -246,21 +246,28 @@ This helper merges two objects into one to extend the context.
 {{/merge}}
 ```
 
-#### `{{#deepMerge [data] with=[obj|string] }}`
+#### `{{#deepMerge [data] with=[obj|string] arrayMerge=[String] }}`
 
 - `data` `Object` - Data object.
 - `with` `Object|String` - JSON string or object which will be merged with `data`.
+- `arrayMerge` `String` - You can define how to merge arrays (`overwrite`, `keep`, `extend`). The default merging strategy combines the arrays by using `extend` and `overwrite` at the same time. 
 
 This helper merges two objects into one to extend the context by using a deepmerge package.
 
 ```handlebars
-{{#deepMerge this with=data}}
+{{#deepMerge this with=data arrayMerge="keep"}}
     <li class="item">
         {{> item }}
     </li>
 {{/deepMerge}}
 
-{{#deepMerge this with='{"custom": "content"}'}}
+{{#deepMerge this with='{"custom": "content"}' arrayMerge="overwrite"}}
+    <li class="item">
+        {{> item }}
+    </li>
+{{/deepMerge}}
+
+{{#deepMerge this with='{"custom": "content"}' arrayMerge="extend"}}
     <li class="item">
         {{> item }}
     </li>
