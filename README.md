@@ -205,11 +205,14 @@ This helper returns a limited output from your data object.
 {{/limit}}
 ```
 
-#### `{{{markdown [filepath]}}}`
+#### `{{{markdown [filepath] context=[data]}}}`
 
 - `filepath` `String` - Path to your markdown file.
+- `context` `Object` - Data context which you can use in your markdown file. When nothing provided it falls back to root data object.
 
 This helper renders a markdown file into HTML by using `markdown-it`, `markdown-it-attrs` and `markdown-it-named-headers`.
+
+It supports handlebars syntax in it and highlights code snippets by using `higlightjs`.
 
 ```handlebars
 {{{markdown "dir/file.md"}}}
