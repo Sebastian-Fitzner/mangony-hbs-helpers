@@ -1,4 +1,5 @@
 var lib = require('./lib/');
+var markdownHelper = require('./lib/helpers/markdown');
 
 /**
  * Registers helpers on a Handlebars instance.
@@ -10,6 +11,8 @@ var lib = require('./lib/');
  */
 lib.register = function (handlebars) {
 	handlebars.registerHelper(lib);
+
+	markdownHelper.register(handlebars);
 
 	return lib;
 };
