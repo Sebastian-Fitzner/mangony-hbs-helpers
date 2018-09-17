@@ -89,10 +89,11 @@ This helper embeds the file content.
 {{{embeding "my/custom/file.hbs"}}}
 ```
 
-#### `{{{#filter [array] by=[value] reverse=[boolean]}}}`
+#### `{{{#filter [array] by=[value] val=[val] reverse=[boolean]}}}`
 
 - `array` `Array` - Array you want to filter.
-- `by` `String` - Filter value.
+- `by` `String` - Filter Property.
+- `val` `String` - Filter value - optional.
 - `reverse` `Boolean` - If you want to reverse the result set it to true.
 
 This helper filters an array after a specific property value. 
@@ -101,6 +102,12 @@ This helper filters an array after a specific property value.
 {{#filter myData by="settings.hide" reverse=true}}
     {{#each this}}
         my filtered content element {{this.name}}
+    {{/each}}
+{{/filter}}
+
+{{#filter myData by="settings.sitemap" val="Category Y"}}
+    {{#each this}}
+        my filtered content element {{this.name}} for category y.
     {{/each}}
 {{/filter}}
 ```

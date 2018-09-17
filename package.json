@@ -1,6 +1,6 @@
 {
   "name": "mangony-hbs-helpers",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Handlebars helpers used by Mangony",
   "main": "index.js",
   "scripts": {
@@ -26,12 +26,12 @@
     "export-files": "~2.1.1",
     "get-value": "^3.0.1",
     "highlight.js": "~9.12.0",
-    "js-beautify": "~1.7.5",
-    "markdown-it": "~8.4.1",
-    "markdown-it-attrs": "2.1.0",
+    "js-beautify": "~1.8.6",
+    "markdown-it": "~8.4.2",
+    "markdown-it-attrs": "2.3.1",
     "markdown-it-named-headers": "0.0.4",
     "moment": "~2.22.2",
-    "prismjs": "^1.14.0"
+    "prismjs": "^1.15.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
