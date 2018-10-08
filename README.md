@@ -221,6 +221,8 @@ This helper renders a markdown file into HTML by using `markdown-it`, `markdown-
 
 It supports handlebars syntax in it and highlights code snippets by using `higlightjs`.
 
+Next to that it provides the root context which is accessible via `rootContext`. 
+
 ```handlebars
 {{{markdown "dir/file.md"}}}
 ```
